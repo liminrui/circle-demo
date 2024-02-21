@@ -4,13 +4,13 @@ version: 2.1
 jobs:
   build:
     docker:
-     - image: circleci/node:10
+     - image: circleci/node:20
     steps:
       - run: echo "Say hello to YAML!"
       - run: npm -v
       - run:
           name: Install
-          command: yarn install
+          command: npm install
       - run:
           name: Build
-          command: yarn build
+          command: vite build
