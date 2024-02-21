@@ -8,7 +8,7 @@ jobs:
     steps:
       - run: echo "Say hello to YAML!"
       - run: npm -v
-      - run: checkout
+      - checkout
       - run:
           name: Install
           command: npm install
