@@ -13,4 +13,4 @@ jobs:
           command: npm install
       - run:
           name: Build
-          command: vite build
+          command: npm run build
