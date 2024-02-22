@@ -14,9 +14,9 @@ echo 'create success'
 cd gh-pages-branch
 
 #创建一个新的仓库
-git config --gobal user.email "$GH_EMAIL" >/
+git config --global user.email "$GH_EMAIL" >/
 dev/null 2>&1
-git config --gobal user.name "$GH_NAME" >/
+git config --global user.name "$GH_NAME" >/
 dev/null 2>&1
 git init
 git remote add --fetch origin "$remote"
