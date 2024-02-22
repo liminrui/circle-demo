@@ -2,16 +2,13 @@
 version: 2.1
 
 jobs:
-  deploy-job:
-    steps:
-      - add_ssh_keys:
-        fingerprints:
-          - "SHA256:W9nNeqH1ObudeY8OFYNrBywL2jAc5uLvKb4EMPnLj5A"
   build:
     docker:
      - image: cimg/node:16.20.1
     steps:
-      
+      - add_ssh_keys:
+            fingerprints:
+              - "SHA256:dgsJ7zizvtvIRQlObKRlykp/0m74c7P+djjd/ong3Ss"
       - run: echo "Say hello to YAML!"
       - run: npm -v
       - checkout
