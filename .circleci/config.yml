@@ -6,19 +6,22 @@ jobs:
     docker:
      - image: cimg/node:16.20.1
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - ""
       - run: echo "Say hello to YAML!"
       - run: npm -v
       - checkout
-      # - restore_cahce:
-      #   keys:
-      #     - dependencies-
+      - restore_cache:
+        key:
+          - dependency
       - run:
           name: Install
           command: npm install
-      # - save_cache:
-      #     paths:
-      #       - node_modules
-      #     key: dependency
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependency
       - run:
           name: Build
           command: npm run build
