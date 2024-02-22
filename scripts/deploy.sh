@@ -10,7 +10,6 @@ echo 'remote is:'$remote
 
 #新建一个发布的目录
 mkdir gh-pages-branch
-echo 'create success'
 cd gh-pages-branch
 
 #创建一个新的仓库
