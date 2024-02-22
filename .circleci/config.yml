@@ -9,9 +9,22 @@ jobs:
       - run: echo "Say hello to YAML!"
       - run: npm -v
       - checkout
+      - restore_cahce:
+        keys:
+          - dependency
       - run:
           name: Install
           command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependency
       - run:
           name: Build
           command: npm run build
+      - run:
+          name: Deploy
+          command: chmod +x scripts/deploy.sh
+      - run:
+          name: run deploy to github pages
+          command: ./scripts/deploy.sh
