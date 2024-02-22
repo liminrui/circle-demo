@@ -8,7 +8,7 @@ jobs:
     steps:
       - add_ssh_keys:
             fingerprints:
-              - "SHA256:dgsJ7zizvtvIRQlObKRlykp/0m74c7P+djjd/ong3Ss"
+              - "SHA256:W9nNeqH1ObudeY8OFYNrBywL2jAc5uLvKb4EMPnLj5A"
       - run: echo "Say hello to YAML!"
       - run: npm -v
       - checkout
