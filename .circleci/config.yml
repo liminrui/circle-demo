@@ -6,6 +6,9 @@ jobs:
     docker:
      - image: cimg/node:16.20.1
     steps:
+      - add_ssh_keys:
+        fingerprints:
+          - "SHA256:W9nNeqH1ObudeY8OFYNrBywL2jAc5uLvKb4EMPnLj5A"
       - run: echo "Say hello to YAML!"
       - run: npm -v
       - checkout
