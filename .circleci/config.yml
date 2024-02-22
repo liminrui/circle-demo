@@ -9,16 +9,16 @@ jobs:
       - run: echo "Say hello to YAML!"
       - run: npm -v
       - checkout
-      - restore_cahce:
-        keys:
-          - dependency
+      # - restore_cahce:
+      #   keys:
+      #     - dependencies-
       - run:
           name: Install
           command: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: dependency
+      # - save_cache:
+      #     paths:
+      #       - node_modules
+      #     key: dependency
       - run:
           name: Build
           command: npm run build
