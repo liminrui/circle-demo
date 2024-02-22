@@ -12,9 +12,15 @@ jobs:
       - run: echo "Say hello to YAML!"
       - run: npm -v
       - checkout
+      - restore_cache:
+          key: v1-myapp-cache
       - run:
           name: Install
           command: npm install
+      - save_cache:
+          paths: 
+            - node_modules
+          key: v1-myapp-cache
       - run:
           name: Build
           command: npm run build

@@ -3,6 +3,6 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/circle-demo',
+  base: process.env.NODE_ENV === 'production' ? '/circle-demo' : '',
   plugins: [vue()],
 })
